@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quan Antemudio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CCapture.js for WebM export (widely supported video format) -->
+    <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+</head>
+<body>
+    <h1>Quan Antemudio</h1>
+    <p>a free animation software & studio 🎮</p>
+
+    <div class="toolbar">
+        <button id="pencil">Pencil</button>
+        <button id="eraser">Eraser</button>
+        <button id="bucket">Bucket Fill</button>
+        <input type="color" id="color-picker" value="#000000">
+
+        <button id="clear">Clear Frame</button>
+        <button id="add-frame">Add Frame</button>
+        <button id="delete-frame">Delete Frame</button>
+        <button id="duplicate-frame">Duplicate Frame</button>
+
+        <input type="number" id="fps" value="12" min="1" max="60"> FPS
+
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+
+        <select id="resolution">
+            <option value="original">Original (800×600)</option>
+            <option value="720">720p (1280×720)</option>
+            <option value="1080">1080p (1920×1080)</option>
+        </select>
+
+        <button id="export-video">Export Video (.webm)</button>
+
+        <button id="save-qua1">Save .qau1</button>
+        <button id="load-qua1">Load .qau1</button>
+        <input type="file" id="load-file-input" accept=".qau1,.json" style="display:none;">
+    </div>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <div id="timeline" class="timeline"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
